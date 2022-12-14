@@ -1,0 +1,367 @@
+/* global */
+
+body {
+    background-color: rgb(11, 48, 59);
+    height: 100%;
+}
+
+/* layout */
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.left-col {
+    justify-content: center;
+    flex-basis: 100%;
+    max-width: 100%;
+}
+
+.right-col {
+    justify-content: center;
+    position: relative;
+    top: 50px;
+    flex-basis: 90%;
+    max-width: 90%;
+}
+
+.header {
+    margin-top: 35px;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    font-family: 'Bowlby One SC', cursive;
+    font-weight: 400;
+    position: absolute;
+    font-size: 75px;
+    color: #fff;
+    opacity: .5;
+    line-height: .75;
+    z-index: -100;
+}
+
+.smaller {
+    font-size: 38px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.button-wrapper {
+    width: 90vw;
+    height: auto;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background-color: rgb(17, 83, 103);
+    border-radius: 25px;
+    border: 10px solid #fff;
+}
+
+.row-one {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* buttons */
+
+.btn button {
+    background: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    margin: 2px 2px;
+}
+
+#eyeBtn {
+    background-image: url(../images/eye_a.svg);
+}
+
+#eyeBtn:active {
+    background-image: url(../images/eye_b.svg);
+}
+
+#noseBtn {
+    background-image: url(../images/nose_a.svg);
+}
+
+#noseBtn:active {
+    background-image: url(../images/nose_b.svg);
+}
+
+#mouthBtn {
+    background-image: url(../images/mouth_a.svg);
+}
+
+#mouthBtn:active {
+    background-image: url(../images/mouth_b.svg);
+}
+
+#headBtn {
+    background-image: url(../images/head_a.svg);
+}
+
+#headBtn:active {
+    background-image: url(../images/head_b.svg);
+}
+
+#resetBtn {
+    background-image: url(../images/reset_a.svg);
+}
+
+#resetBtn:active {
+    background-image: url(../images/reset_b.svg);
+}
+
+/* svg */
+
+.svg {
+    width: 90vw;
+    padding: 0 0px;
+    padding-bottom: 15px;
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(17,83,103,1) 50%);
+    border-radius: 25px;
+    border: 10px solid #fff;
+    overflow: hidden;
+}
+
+.errorX {
+    position: absolute;
+    width: 100px;
+    margin: auto;
+    opacity: 0;
+    justify-self: center;
+    margin-top: 25%;
+    margin-left: 25%;
+}
+
+.svg #eye1L, #eye1R, #eye2L, #eye2R, #eye3L, #eye3R, #eye4L, #eye4R, #nose1, #nose2, #nose3, #nose4, #mouth1, #mouth2, #mouth3, #mouth4, #head1, #head2, #head3, #head4 {
+    opacity: 0;
+}
+
+.to-bottom {
+    z-index: -100;
+}
+
+/* footer */
+
+footer {
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+    padding: 15px;
+    z-index: -150;
+}
+
+footer p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: small;
+    color: rgb(17, 83, 103);
+} 
+
+/* media queries */
+
+@media (min-width: 320px) {
+
+    h1 {
+        font-size: 90px;
+    }
+    
+    .smaller {
+        font-size: 45px;
+    }
+
+    /* buttons */
+
+    .btn button {
+        width: 50px;
+        height: 50px;
+    }
+
+    .svg {
+        width: 90vw;
+        margin-top: 10px;
+        padding: 0 20px;
+        padding-bottom: 15px;
+    }
+
+}
+
+@media (min-width: 576px) {
+
+    .container {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .button-wrapper {
+        width: 90vw;    
+        margin-top: 20px;    
+    }
+
+    .btn button {
+        width: 75px;
+        height: 75px;
+        margin: 0 5px;
+    }
+
+    .svg {
+        width: 90vw;
+        margin-top: 20px;
+        padding: 0 120px;
+        padding-bottom: 0px;
+    }
+
+    .errorX {
+        margin-top: 20%;
+        margin-left: 20%;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .left-col{
+        flex-basis: 25%;
+        max-width: 25%;
+        margin-left: 3vw;
+    }
+    
+    .right-col{
+        position: inherit;
+        flex-basis: 70%;
+        max-width: 70%;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+    
+    .smaller {
+        font-size: 30px;
+    }
+
+    .button-wrapper {
+        width: 60vw;
+        margin-top: 25px;
+        padding: 2px;
+    }
+
+    /* buttons */
+
+    .btn button {
+        width: 65px;
+        height: 65px;
+        margin: 5px 5px;
+    }
+
+    /* svg */
+
+    .svg {
+        width: 60vw;
+        padding: 0 30px;
+        padding-bottom: 60px;
+    }
+    
+
+}
+
+@media (min-width: 992px) {
+
+    /* layout */
+
+    .left-col{
+        flex-basis: 30%;
+        max-width: 30%;
+    }
+
+    .rightt-col{
+        flex-basis: 60%;
+        max-width: 60%;
+    }
+
+    .header {
+        margin-top: 25px;
+        height: 20vh;
+    }
+
+    h1 {
+        padding: 25px;
+        font-size: 80px;
+    }
+
+    .smaller {
+        font-size: 40px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .errorX {
+        margin-top: 15%;
+    }
+
+    .button-wrapper {
+        margin-top: 25px;
+        padding: 5px;
+    }
+
+    /* buttons */
+
+    .btn button {
+        width: 80px;
+        height: 80px;
+        margin: 5px 15px;
+    }
+
+    /* svg */
+
+    .svg {
+        margin-top: 30px;
+        padding: 0 130px;
+        padding-bottom: 10px;
+    }
+
+    .errorX {
+        margin-top: 15%;
+        margin-left: 15%;
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    /* svg */
+
+    .svg {
+        padding: 0 150px;
+    }
+}
+
+@media (min-width: 1440px) {
+
+    /* svg */
+
+    .svg {
+        padding: 0 200px;
+    }
+}
