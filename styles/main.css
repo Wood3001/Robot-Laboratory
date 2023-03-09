@@ -1,34 +1,26 @@
 /* global */
 
 body {
+
     background-color: rgb(11, 48, 59);
-    height: 100%;
 }
 
 /* layout */
 
 .wrapper {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1rem 1fr 1rem;
+    grid-template-rows: 3rem 1rem 1fr;
 }
 
-.left-col {
-    justify-content: center;
-    flex-basis: 100%;
-    max-width: 100%;
+header {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 1;
+    height: 3rem;
+    padding: 1rem;
 }
 
-.right-col {
-    justify-content: center;
-    position: relative;
-    top: 50px;
-    flex-basis: 90%;
-    max-width: 90%;
-}
-
-.header {
-    margin-top: 35px;
-    height: 15vh;
+.logo {
     display: flex;
     justify-content: center;
 }
@@ -37,21 +29,19 @@ h1 {
     font-family: 'Bowlby One SC', cursive;
     font-weight: 400;
     position: absolute;
-    font-size: 75px;
+    font-size: 23px;
     color: #fff;
     opacity: .5;
     line-height: .75;
     z-index: -100;
 }
 
-.smaller {
-    font-size: 38px;
-}
-
 .container {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 1;
     display: flex;
     flex-direction: column;
-    padding: 15px;
+    justify-content: center;
 }
 
 .button-wrapper {
@@ -129,7 +119,7 @@ h1 {
 /* svg */
 
 .svg {
-    width: 90vw;
+    /* width: 90vw; */
     padding: 0 0px;
     padding-bottom: 15px;
     background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(17,83,103,1) 50%);
@@ -178,18 +168,14 @@ footer p {
 @media (min-width: 320px) {
 
     h1 {
-        font-size: 90px;
-    }
-    
-    .smaller {
-        font-size: 45px;
+        font-size: 32px;
     }
 
     /* buttons */
 
     .btn button {
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
     }
 
     .svg {
@@ -198,14 +184,12 @@ footer p {
         padding: 0 20px;
         padding-bottom: 15px;
     }
-
 }
 
-@media (min-width: 576px) {
+@media (min-width: 540px) {
 
     .container {
         width: 100%;
-        flex-direction: column;
     }
 
     .button-wrapper {
@@ -214,13 +198,14 @@ footer p {
     }
 
     .btn button {
-        width: 75px;
-        height: 75px;
+        width: 80px;
+        height: 80px;
         margin: 0 5px;
     }
 
     .svg {
         width: 90vw;
+        height: 25rem;
         margin-top: 20px;
         padding: 0 120px;
         padding-bottom: 0px;
