@@ -10,6 +10,7 @@ body {
 .wrapper {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .left-col {
@@ -44,6 +45,20 @@ h1 {
     z-index: -100;
 }
 
+.instructions {
+    display: flex;
+    width: 300px;
+}
+
+p {
+    max-width: 300px;
+    font-family: 'Roboto';
+    position: absolute;
+    font-size: 24px;
+    color: #fff;
+    z-index: -100;
+}
+
 .smaller {
     font-size: 38px;
 }
@@ -51,7 +66,8 @@ h1 {
 .container {
     display: flex;
     flex-direction: column;
-    padding: 15px;
+    align-items: center;
+    /* padding: 15px; */
 }
 
 .button-wrapper {
@@ -129,6 +145,7 @@ h1 {
 /* svg */
 
 .svg {
+    display: grid;
     width: 90vw;
     padding: 0 0px;
     padding-bottom: 15px;
@@ -144,8 +161,9 @@ h1 {
     margin: auto;
     opacity: 0;
     justify-self: center;
-    margin-top: 25%;
-    margin-left: 25%;
+    align-self: center;
+    /* margin-top: 25%;
+    margin-left: 25%; */
 }
 
 .svg #eye1L, #eye1R, #eye2L, #eye2R, #eye3L, #eye3R, #eye4L, #eye4R, #nose1, #nose2, #nose3, #nose4, #mouth1, #mouth2, #mouth3, #mouth4, #head1, #head2, #head3, #head4 {
@@ -225,11 +243,6 @@ footer p {
         padding: 0 120px;
         padding-bottom: 0px;
     }
-
-    .errorX {
-        margin-top: 20%;
-        margin-left: 20%;
-    }
 }
 
 @media (min-width: 768px) {
@@ -237,6 +250,7 @@ footer p {
     .wrapper {
         display: flex;
         flex-direction: row;
+        align-items: unset;
     }
 
     .left-col{
@@ -249,6 +263,11 @@ footer p {
         position: inherit;
         flex-basis: 70%;
         max-width: 70%;
+        display: flex;
+    }
+
+    .header {
+        justify-content: left;
     }
 
     h1 {
@@ -304,7 +323,7 @@ footer p {
     }
 
     h1 {
-        padding: 25px;
+        padding: 25px 0;
         font-size: 80px;
     }
 
@@ -314,10 +333,6 @@ footer p {
 
     .container {
         padding: 15px;
-    }
-
-    .errorX {
-        margin-top: 15%;
     }
 
     .button-wrapper {
@@ -340,12 +355,6 @@ footer p {
         padding: 0 130px;
         padding-bottom: 10px;
     }
-
-    .errorX {
-        margin-top: 15%;
-        margin-left: 15%;
-    }
-
 }
 
 @media (min-width: 1200px) {
